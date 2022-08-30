@@ -1,0 +1,15 @@
+G:\code\Learn\c#\BOOKMAN\bin\Debug\net6.0\BOOKMAN.exe
+G:\code\Learn\c#\BOOKMAN\bin\Debug\net6.0\BOOKMAN.deps.json
+G:\code\Learn\c#\BOOKMAN\bin\Debug\net6.0\BOOKMAN.runtimeconfig.json
+G:\code\Learn\c#\BOOKMAN\bin\Debug\net6.0\BOOKMAN.dll
+G:\code\Learn\c#\BOOKMAN\bin\Debug\net6.0\BOOKMAN.pdb
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.csproj.AssemblyReference.cache
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.GeneratedMSBuildEditorConfig.editorconfig
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.AssemblyInfoInputs.cache
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.AssemblyInfo.cs
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.csproj.CoreCompileInputs.cache
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.dll
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\refint\BOOKMAN.dll
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.pdb
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\BOOKMAN.genruntimeconfig.cache
+G:\code\Learn\c#\BOOKMAN\obj\Debug\net6.0\ref\BOOKMAN.dll
