@@ -1,60 +1,51 @@
-namespace BookMan.ConsoleApp.Views
+using System;
+using Framework;
+namespace BookMan.ConsoleApp.Views // chú ý cách Visual Studio đặt tên namespace
 {
-    using Models; // chu y cach dung using ben trong namepace
+    using Models; // chú ý cách dùng using bên trong namespace
+    /// <summary>
+    /// class để hiển thị một cuốn sách
+    /// </summary>
     internal class BookSingleView
     {
-        protected Book Model; // bien nay de luuu tru thong tin cuon sach dang can hien thi
+        protected Book Model; // biến này để lưu trữ thông tin cuốn sách đang cần hiển thị
         /// <summary>
-        /// day la ham tao, se duoc goi dau tien khi tao object
+        /// đây là hàm tạo, sẽ được gọi đầu tiên khi tạo object
         /// </summary>
-        /// <param name="model">mot cuon sach cu the se duoc hien thi</param>
+        /// <param name="model">cuốn sách cụ thể sẽ được hiển thị</param>
         public BookSingleView(Book model)
         {
-            Model = model; // chuyen du lieu tu tham so sang bien thanh vien de su dung trong toan class
+            Model = model; // chuyển dữ liệu từ tham số sang biến thành viên để sử dụng trong toàn class            
         }
         /// <summary>
-        /// thuc hien in thong tin ra man hinh console
+        /// thực hiện in thông tin ra màn hình console
         /// </summary>
         public void Render()
         {
-            if (Model == null) // kiem tra xem object co du lieu khong
-            {
-                // Console.ForegroundColor = ConsoleColor.Red; // doi mau chu sang do
-                // Console.WriteLine("NO BOOK FOUND. SORRY!"); // in ra dong thong bao
-                // Console.ResetColor(); // tra lai mau chu mac dinh
-                WriteLine("NO BOOK FOUND. SORRY!", ConsoleColor.Red);
-                return; // ket thuc thuc hien phuong thuc (bo qua phan con lai)
+            if (Model == null) // kiếm tra xem có dữ liệu không
+            { 
+                // sử dụng phương thức tĩnh WriteLine của lớp ViewHelp
+                ViewHelp.WriteLine("NO BOOK FOUND. SORRY!", ConsoleColor.Red);
+                return; // kết thúc thực hiện phương thức (bỏ qua phần còn lại)
             }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("BOOK DETAIL INFORMATION");
-            Console.ResetColor();
-            /* Cac dong duoi day viet ra thong tin cu the theo tung dong
-             * su dung cach tao xau kieu "interpolation"
-             * va dung dau cach de can chinh tao tham my
+            // sử dụng phương thức tĩnh WriteLine của lớp ViewHelp
+            ViewHelp.WriteLine("BOOK DETAIL INFORMATION", ConsoleColor.Green);
+            /* các dòng dưới đây viết ra thông tin cụ thể theo từng dòng
+             * sử dụng cách tạo xâu kiểu "interpolation"
+             * và dùng dấu cách để căn chỉnh tạo thẩm mỹ
              */
-            Console.WriteLine($"Authors:        {Model.Authors}");
-            Console.WriteLine($"Title:          {Model.Title}");
-            Console.WriteLine($"Publisher:      {Model.Publisher}");
-            Console.WriteLine($"Year:           {Model.Year}");
-            Console.WriteLine($"Edition:        {Model.Edition}");
-            Console.WriteLine($"Isbn:           {Model.Isbn}");
-            Console.WriteLine($"Tags:           {Model.Tags}");
-            Console.WriteLine($"Desciption:     {Model.Description}");
-            Console.WriteLine($"Rating:         {Model.Rating}");
-            Console.WriteLine($"Reading:        {Model.Reading}");
-            Console.WriteLine($"File:           {Model.File}");
-            Console.WriteLine($"FileName:       {Model.FileName}");
-        }
-        /// <summary>
-        /// in thong bao ra man hinh console voi chu mau
-        /// </summary>
-        /// <param name="message">thong bao</param>
-        /// <param name="color">mau</param>
-        protected void WriteLine(string message, ConsoleColor color)
-        {
-            Console.ForegroundColor = color;
-            Console.WriteLine(message);
-            Console.ResetColor();
+            Console.WriteLine($"Authors:     {Model.Authors}");
+            Console.WriteLine($"Title:       {Model.Title}");
+            Console.WriteLine($"Publisher:   {Model.Publisher}");
+            Console.WriteLine($"Year:        {Model.Year}");
+            Console.WriteLine($"Edition:     {Model.Edition}");
+            Console.WriteLine($"Isbn:        {Model.Isbn}");
+            Console.WriteLine($"Tags:        {Model.Tags}");
+            Console.WriteLine($"Description: {Model.Description}");
+            Console.WriteLine($"Rating:      {Model.Rating}");
+            Console.WriteLine($"Reading:     {Model.Reading}");
+            Console.WriteLine($"File:        {Model.File}");
+            Console.WriteLine($"File Name:   {Model.FileName}");
         }
     }
 }
