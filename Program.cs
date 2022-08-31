@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace BookMan.ConsoleApp
+{
+    using Controllers;
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            BookController controler = new BookController();
+            controler.Single(0);
+            Console.ReadKey();
+        }
+    }
+}
