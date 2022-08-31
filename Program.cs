@@ -12,6 +12,9 @@
                 string request = Console.ReadLine();
                 switch (request.ToLower())
                 {
+                    case "cls":
+                        Console.Clear();
+                        break;
                     case "single":
                         controller.Single(1);
                         break;
@@ -20,6 +23,9 @@
                         break;
                     case "update":
                         controller.Update(1);
+                        break;
+                    case "list":
+                        controller.List();
                         break;
                     default:
                         Console.WriteLine("Unknown command");
