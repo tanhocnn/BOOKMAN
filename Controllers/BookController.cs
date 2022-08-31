@@ -30,5 +30,10 @@ namespace BookMan.ConsoleApp.Controllers
             // goi phuong thuc Render de thuc su hien thi ra man hinh
             view.Render();
         }
+        public void Create()
+        {
+            BookCreateView view = new BookCreateView(); // khoi tao object
+            view.Render(); // hien thi ra man hinh
+        }
     }
 }
