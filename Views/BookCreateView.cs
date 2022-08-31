@@ -102,5 +102,6 @@ namespace BookMan.ConsoleApp.Views
             Console.ResetColor();
             return value;
         }
+        
     }
 }

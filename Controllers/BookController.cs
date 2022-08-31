@@ -35,5 +35,11 @@ namespace BookMan.ConsoleApp.Controllers
             BookCreateView view = new BookCreateView(); // khoi tao object
             view.Render(); // hien thi ra man hinh
         }
+        public void Update(int id)
+        {
+            var model = new Book();
+            var view = new BookUpdateView(model);
+            view.Render();
+        }
     }
 }
