@@ -1,3 +1,4 @@
+using System;
 namespace Framework
 {
     public static class ViewHelp
@@ -79,6 +80,48 @@ namespace Framework
             string value = Console.ReadLine();
             Console.ResetColor();
             return value;
+        }
+        /// <summary>
+        /// cap nhat gia tri kieu string. Neu an enter ma khong nhap du lieu se tra lai gia tri cu
+        /// </summary>
+        /// <param name="label">dong thong bao</param>
+        /// <param name="oldValue">gia tri goc</param>
+        /// <param name="labelColor">mau chu thong bao</param>
+        /// <param name="valueColor">mau chu du lieu</param>
+        /// <returns></returns>
+        public static string InputString(string label, string oldValue, ConsoleColor labelColor = ConsoleColor.Magenta,
+                                                                        ConsoleColor valueColor = ConsoleColor.White)
+        {
+            Write($"{label}: ", labelColor);
+            WriteLine(oldValue, ConsoleColor.Yellow);
+            Write("  New value >> ", ConsoleColor.Green);
+            Console.ForegroundColor = valueColor;
+            string? newValue = Console.ReadLine();
+            return string.IsNullOrEmpty(newValue) ? oldValue : newValue.Trim();
+        }
+        public static int InputInt(string label, int oldValue, ConsoleColor labelColor = ConsoleColor.Magenta,
+                                                                ConsoleColor valueColor = ConsoleColor.White)
+        {
+            Write($"{label}: ", labelColor);
+            WriteLine($"{oldValue}", ConsoleColor.White);
+            Write("  New value >> ", ConsoleColor.Green);
+            Console.ForegroundColor = valueColor;
+            string str = Console.ReadLine();
+            if (string.IsNullOrEmpty(str)) return oldValue;
+            if (str.ToInt(out int i)) return i; // su dung phuong thuc mo rong ToInt
+            return oldValue;
+        }
+        public static bool InputBool(string label, bool oldValue, ConsoleColor labelColor = ConsoleColor.Magenta,
+                                                                ConsoleColor valueColor = ConsoleColor.White)
+        {
+            Write($"{label}: ", labelColor);
+            // su dung phuong thuc mo rong ToString
+            WriteLine(oldValue.ToString("y/n"), ConsoleColor.Yellow);
+            Write("  New value >> ", ConsoleColor.Green);
+            Console.ForegroundColor = valueColor;
+            string str = Console.ReadLine();
+            if (string.IsNullOrEmpty(str)) return oldValue;
+            return str.ToBool(); // su dung phuong thuc mo rong ToBool
         }
     }
 }
