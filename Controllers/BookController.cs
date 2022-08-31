@@ -13,7 +13,18 @@ namespace BookMan.ConsoleApp.Controllers
         /// <param name="id">ma dinh danh cua cuon sach</param>
         public void Single(int id)
         {
-            Book model = new Book();
+            Book model = new Book()
+            {
+                Id = 1,
+                Authors = "Adam Freeman",
+                Title = "Expert asp.net web api 2 for mvc developers",
+                Publisher = "Apress",
+                Year = 2004,
+                Tags = "c#, asp.net, mvc",
+                Description = "Expert insight and understanding of how to create, customize, and deploy complex, plexible, and robust httpp web",
+                Rating = 5,
+                Reading = true
+            };
             // khoi tao view
             BookSingleView view = new BookSingleView(model);
             // goi phuong thuc Render de thuc su hien thi ra man hinh
