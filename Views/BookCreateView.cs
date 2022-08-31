@@ -45,7 +45,7 @@ namespace BookMan.ConsoleApp.Views
             bool reading = readingChar.KeyChar == 'y' || readingChar.KeyChar == 'Y' ?
                 true:false; // chuyen sang kieu bool dung bieu thuc dieu kien
             Console.WriteLine();
-            // TODO: tam dung o day, se quay lai sau
+            // TODO: tam dung o day, se quay lai
         }
     }
 }

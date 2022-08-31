@@ -5,9 +5,24 @@
     {
         private static void Main(string[] args)
         {
-            BookController controler = new BookController();
-            controler.Single(0);
-            Console.ReadKey();
+            BookController controller = new BookController();
+            while (true)
+            {
+                Console.Write("Request> ");
+                string request = Console.ReadLine();
+                switch (request.ToLower())
+                {
+                    case "single":
+                        controller.Single(1);
+                        break;
+                    case "create":
+                        controller.Create();
+                        break;
+                    default:
+                        Console.WriteLine("Unknown command");
+                        break;
+                }
+            }
         }
     }
 }
